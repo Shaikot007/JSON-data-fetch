@@ -1,4 +1,4 @@
-import { FETCH_USERS_DATA } from "../Constant/UsersConstant";
+import { FETCH_USERS_DATA, FETCH_USER_DETAILS_DATA } from "../Constant/UsersConstant";
 import axios from "axios";
 import config from "../../config";
 
@@ -13,6 +13,30 @@ export const fetchUsersAction = () => {
       .then(data => {
         dispatch({
           type: FETCH_USERS_DATA,
+          payload: data
+        })
+      })
+      .catch (error => {
+        console.error(error);
+        return { message: "something went wrong" };
+      });
+  };
+};
+
+export const fetchUserDetailsAction = (id) => {
+  return (dispatch) => {
+    const host = `${config.api_url}`;
+    const path = "/" + id;
+
+    let url = host + path;
+
+    axios.get(url)
+      .then(response => {
+        return response.data
+      })
+      .then(data => {
+        dispatch({
+          type: FETCH_USER_DETAILS_DATA,
           payload: data
         })
       })

@@ -3,15 +3,28 @@ import "./App.css";
 import { Provider } from "react-redux";
 import { store } from "./Redux/Store/Store";
 import Home from "./Components/Home/Home";
+import UserDetailsModal from "./Components/UserDetails/UserDetailsModal";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 library.add(faTrashAlt);
 
 const App = () => {
   return (
     <div className="App">
-      <Home />
+      <Switch>
+        <Route path="/">
+          <Home />
+          <Route path="/:id">
+            <UserDetailsModal />
+          </Route>
+        </Route>
+      </Switch>
     </div>
   );
 };
@@ -19,7 +32,9 @@ const App = () => {
 const AppWrapper = () => {
   return (
     <Provider store={store}>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </Provider>
   )
 };

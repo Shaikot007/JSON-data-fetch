@@ -1,0 +1,66 @@
+.ModalHeader {
+  cursor: default;
+}
+
+.ModalBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+.ModalBodyInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 200px;
+  width: 100%;
+}
+
+.InfoItemImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 190px;
+  width: 190px;
+}
+
+.InfoItemImage img {
+  height: 100%;
+  width: 100%;
+}
+
+.InfoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 190px;
+  width: 300px;
+}
+
+.InfoItemText {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 15%;
+  width: 100%;
+}
+
+.InfoItemText p {
+  margin-top: 1rem;
+  padding: 0% 2% 0% 2%;
+}
+
+.ModalBodyDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  text-align: justify;
+}

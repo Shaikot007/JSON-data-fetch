@@ -1,3 +1,4 @@
 //Redux constant
 
 export const FETCH_USERS_DATA = "FETCH_USERS_DATA";
+export const FETCH_USER_DETAILS_DATA = "FETCH_USER_DETAILS_DATA";
