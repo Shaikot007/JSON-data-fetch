@@ -24,7 +24,7 @@ const App = () => {
         <div className="TopNavbar">
           <div className="BrandName">
             <Link to="/">
-              <Button color="warning">Spekter GmbH</Button>
+              <Button color="warning">Home</Button>
             </Link>
           </div>
           <div className="PostBox">

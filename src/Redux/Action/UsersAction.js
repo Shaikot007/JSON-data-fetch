@@ -1,6 +1,7 @@
 import {
   FETCH_USERS_DATA,
   FETCH_USER_DETAILS_DATA,
+  POST_USER_DATA,
   DELETE_USER_DATA
 } from "../Constant/UsersConstant";
 import axios from "axios";
@@ -51,6 +52,28 @@ export const fetchUserDetailsAction = (id) => {
   };
 };
 
+export const postUserAction = (values) => {
+  return (dispatch) => {
+    const url = `${config.api_url}`;
+
+    axios.post(url, values)
+      .then(response => {
+        return response.data
+      })
+      .then(data => {
+        alert("Create a post successfully.")
+        dispatch({
+          type: POST_USER_DATA,
+          payload: data
+        })
+      })
+      .catch (error => {
+        console.error(error);
+        return { message: "something went wrong" };
+      });
+  };
+};
+
 export const deleteUserAction = (id) => {
   return (dispatch) => {
     const host = `${config.api_url}`;
@@ -63,6 +86,7 @@ export const deleteUserAction = (id) => {
         return response.data
       })
       .then(data => {
+        alert(`Post with id: ${id} deleted.`)
         dispatch({
           type: DELETE_USER_DATA,
           payload: data

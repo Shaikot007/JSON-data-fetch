@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import "./CreatePost.css";
-import axios from "axios";
+import { useDispatch } from "react-redux";
+import { postUserAction } from "../../Redux/Action/UsersAction";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import { Link } from "react-router-dom";
-import config from "../../config";
 
 function CreatePost() {
 
-  const url = `${config.api_url}`;
+  const dispatch = useDispatch();
 
   const [values, setValues] = useState({
     userId: "",
-    id: "",
     title: "",
     body: ""
   });
@@ -40,15 +39,6 @@ function CreatePost() {
       errors.userId = "Enter only numbers";
     };
 
-    if (!values.id) {
-      formIsValid = false;
-      errors.id = "Id required";
-    }
-    else if (!/[0-9]/.test(values.id)) {
-      formIsValid = false;
-      errors.id = "Enter only numbers";
-    };
-
     if (!values.title) {
       formIsValid = false;
       errors.title = "Title required";
@@ -75,16 +65,13 @@ function CreatePost() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (handleValidation()) {
-      //Submit to API
-      axios.post(url, values)
-        .then(response => response.status === 201 ? alert("Create a post successfully.") : null,
-          setValues({
-            userId: "",
-            id: "",
-            title: "",
-            body: ""
-          }))
-        .catch(error => error.response.status !== 201 ? alert(error.response.data.message) : null);
+      dispatch(postUserAction(values));
+      setValues({
+        userId: "",
+        id: "",
+        title: "",
+        body: ""
+      })
     } else {
       alert("Create a post failed.")
     }
@@ -98,11 +85,6 @@ function CreatePost() {
           <Label for="userId">User id</Label>
           <Input type="text" name="userId" id="userId" onChange={handleChange} value={values.userId} placeholder="Enter your user id" />
           <p>{errors.userId}</p>
-        </FormGroup>
-        <FormGroup>
-          <Label for="id">Id</Label>
-          <Input type="text" name="id" id="id" onChange={handleChange} value={values.id} placeholder="Enter your id" />
-          <p>{errors.id}</p>
         </FormGroup>
         <FormGroup>
           <Label for="title">Title</Label>
