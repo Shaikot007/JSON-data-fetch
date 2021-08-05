@@ -18,8 +18,8 @@ const UserList = () => {
 
   return (
     <div className="UserInfo">
-      {usersData.map(data =>
-        <div className="User" key={data.id}>
+      {usersData.map((data, index) =>
+        <div className="User" key={index}>
           <div className="UserImage" onClick={() => gotoUserDetails(data.id)}>
             <img src={UserImage} alt="User_image" />
             <div className="UserImageText">

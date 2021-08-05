@@ -9,4 +9,57 @@
   font-size: calc(10px + 2vmin);
   color: white;
   text-align: center;
+  cursor: default;
+}
+
+.Navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  height: 50px;
+  width: 100vw;
+  font-weight: bold;
+  z-index: 1;
+  background-color: #6c757d;
+}
+
+.TopNavbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0%;
+  padding: 0%;
+  height: 100%;
+  width: 100%;
+}
+
+.BrandName {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0%;
+  padding: 0% 2% 0% 2%;
+  height: 100%;
+  width: 50%;
+}
+
+.PostBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0%;
+  padding: 0% 2% 0% 2%;
+  height: 100%;
+  width: 50%;
+}
+
+.PostBox Button {
+  width: 150px;
+  font-weight: bold;
 }
