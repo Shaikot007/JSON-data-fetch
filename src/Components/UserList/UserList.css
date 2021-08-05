@@ -83,6 +83,7 @@
   height: 40%;
   width: 100%;
   text-align: justify;
+  overflow-y: auto;
 }
 
 .UserTitle p {
@@ -128,4 +129,25 @@
   margin: 0%;
   padding: 0% 2% 0% 2%;
   color: white;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 480px) {
+  .User { height: 200px; width: 100px; }
+  .UserTitle p { font-size: 12px; }
+  .UserDelete p { font-size: 10px; }
+  .Trash { font-size: 12px; }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .User { height: 200px; width: 100px; }
+  .UserTitle p { font-size: 12px; }
+  .UserDelete p { font-size: 10px; }
+  .Trash { font-size: 12px; }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .User { height: 250px; width: 150px; }
+  .UserTitle p { font-size: 14px; }
+  .UserDelete p { font-size: 12px; }
+  .Trash { font-size: 14px; }
 }

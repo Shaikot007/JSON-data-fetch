@@ -53,12 +53,12 @@ const UserDetailsModal = (props) => {
             {userDetailsData.body}
           </div>
         </ModalBody>
-        <ModalFooter>
+        <ModalFooter className="ModalFooter">
           <Button color="success" onClick={toggle}>Go back</Button>
         </ModalFooter>
       </Modal>
     </div>
   );
-}
+};
 
 export default UserDetailsModal;

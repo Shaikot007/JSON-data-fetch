@@ -64,3 +64,21 @@
   width: 100%;
   text-align: justify;
 }
+
+@media only screen and (min-width: 280px) and (max-width: 480px) {
+  .InfoItemText { font-size: 12px; }
+  .ModalBodyDetails { font-size: 12px; }
+  .ModalFooter Button { font-size: 12px; }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .InfoItemText { font-size: 12px; }
+  .ModalBodyDetails { font-size: 12px; }
+  .ModalFooter Button { font-size: 12px; }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .InfoItemText { font-size: 14px; }
+  .ModalBodyDetails { font-size: 14px; }
+  .ModalFooter Button { font-size: 14px; }
+}

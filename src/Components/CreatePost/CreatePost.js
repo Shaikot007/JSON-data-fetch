@@ -16,8 +16,6 @@ function CreatePost() {
     body: ""
   });
 
-  console.log(values);
-
   const [errors, setErrors] = useState({});
 
   const handleChange = (event) => {

@@ -70,3 +70,27 @@ form {
   width: 100%;
   font-weight: bold;
 }
+
+@media only screen and (min-width: 280px) and (max-width: 480px) {
+  .CreatePost { margin: 35% 0% 5% 0%; width: 95%; }
+  .CreatePost h3 { font-size: 14px; }
+  .CreatePost Label { font-size: 12px; }
+  .CreatePost Input { font-size: 12px; }
+  .CreatePost Button { font-size: 12px; }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .CreatePost { margin: 25% 0% 5% 0%; width: 80%; }
+  .CreatePost h3 { font-size: 16px; }
+  .CreatePost Label { font-size: 14px; }
+  .CreatePost Input { font-size: 14px; }
+  .CreatePost Button { font-size: 14px; }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .CreatePost { margin: 15% 0% 5% 0%; width: 70%; }
+  .CreatePost h3 { font-size: 18px; }
+  .CreatePost Label { font-size: 16px; }
+  .CreatePost Input { font-size: 16px; }
+  .CreatePost Button { font-size: 16px; }
+}

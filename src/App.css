@@ -48,6 +48,10 @@
   width: 50%;
 }
 
+.BrandName Button {
+  font-weight: bold;
+}
+
 .PostBox {
   display: flex;
   flex-direction: row;
@@ -62,4 +66,25 @@
 .PostBox Button {
   width: 150px;
   font-weight: bold;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 480px) {
+  .App { height: 100%; width: 100%; }
+  .Navbar { width: 100%; }
+  .BrandName Button { font-size: 12px; }
+  .PostBox Button { width: auto; font-size: 12px; }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .App { height: 100%; width: 100%; }
+  .Navbar { width: 100%; }
+  .BrandName Button { font-size: 12px; }
+  .PostBox Button { width: auto; font-size: 12px; }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .App { height: 100%; width: 100%; }
+  .Navbar { width: 100%; }
+  .BrandName Button { font-size: 12px; }
+  .PostBox Button { width: auto; font-size: 12px; }
 }
