@@ -1,10 +1,15 @@
-import { FETCH_USERS_DATA, FETCH_USER_DETAILS_DATA } from "../Constant/UsersConstant";
+import {
+  FETCH_USERS_DATA,
+  FETCH_USER_DETAILS_DATA,
+  DELETE_USER_DATA
+} from "../Constant/UsersConstant";
 
 //Redux reducer
 
 const defaultState = {
   users_list: [],
-  user_details: {}
+  user_details: {},
+  delete_user: {}
 };
 
 export const usersReducer = (state = defaultState, action) => {
@@ -13,6 +18,8 @@ export const usersReducer = (state = defaultState, action) => {
       return { ...state, users_list: [...action.payload] };
     case FETCH_USER_DETAILS_DATA:
       return { ...state, user_details: {...action.payload} };
+    case DELETE_USER_DATA:
+      return { ...state, delete_user: {...action.payload} };
     default:
       return state;
   }
