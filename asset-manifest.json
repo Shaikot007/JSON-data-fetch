@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Spekter-GmbH/static/css/main.adb95607.chunk.css",
+    "main.js": "/Spekter-GmbH/static/js/main.ff9b5e9d.chunk.js",
+    "main.js.map": "/Spekter-GmbH/static/js/main.ff9b5e9d.chunk.js.map",
+    "runtime-main.js": "/Spekter-GmbH/static/js/runtime-main.a6b69f93.js",
+    "runtime-main.js.map": "/Spekter-GmbH/static/js/runtime-main.a6b69f93.js.map",
+    "static/css/2.fb17aa6d.chunk.css": "/Spekter-GmbH/static/css/2.fb17aa6d.chunk.css",
+    "static/js/2.bcc605b5.chunk.js": "/Spekter-GmbH/static/js/2.bcc605b5.chunk.js",
+    "static/js/2.bcc605b5.chunk.js.map": "/Spekter-GmbH/static/js/2.bcc605b5.chunk.js.map",
+    "static/js/3.2c8f6222.chunk.js": "/Spekter-GmbH/static/js/3.2c8f6222.chunk.js",
+    "static/js/3.2c8f6222.chunk.js.map": "/Spekter-GmbH/static/js/3.2c8f6222.chunk.js.map",
+    "index.html": "/Spekter-GmbH/index.html",
+    "static/css/2.fb17aa6d.chunk.css.map": "/Spekter-GmbH/static/css/2.fb17aa6d.chunk.css.map",
+    "static/css/main.adb95607.chunk.css.map": "/Spekter-GmbH/static/css/main.adb95607.chunk.css.map",
+    "static/js/2.bcc605b5.chunk.js.LICENSE.txt": "/Spekter-GmbH/static/js/2.bcc605b5.chunk.js.LICENSE.txt",
+    "static/media/user.18ee03f8.png": "/Spekter-GmbH/static/media/user.18ee03f8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a6b69f93.js",
+    "static/css/2.fb17aa6d.chunk.css",
+    "static/js/2.bcc605b5.chunk.js",
+    "static/css/main.adb95607.chunk.css",
+    "static/js/main.ff9b5e9d.chunk.js"
+  ]
+}
